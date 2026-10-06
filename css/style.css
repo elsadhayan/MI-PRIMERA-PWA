@@ -1,0 +1,339 @@
+/* 1. Reset global y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* 2. Estilos de la barra de navegación (Navbar) */
+nav {
+    background-color: #2c1d11;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+nav h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #d4a373;
+}
+
+/* 3. Contenedor principal de cards */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 4. Estilos de las tarjetas (Cards) */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    color: #2b2b2b;
+}
+
+.card .descripcion {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.3;
+    flex-grow: 1;
+}
+
+/* 5. Botón "Ver más" */
+.btn-ver-mas {
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #d4a373;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #bc8a5f;
+}
+
+/* 6. Estilos para la Ventana Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #d4a373;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+    color: #2c1d11;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+/* Pantalla Detalle */
+.detalle-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.btn-regresar {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #2c1d11;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-regresar:hover {
+    color: #d4a373;
+}
+
+.detalle-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.detalle-card img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.detalle-card h2 {
+    color: #2c1d11;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.detalle-card p {
+    color: #555555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.detalle-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.btn-regresar {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #2c1d11;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-regresar:hover {
+    color: #d4a373;
+}
+
+.detalle-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.detalle-card img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.detalle-card h2 {
+    color: #2c1d11;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.detalle-card p {
+    color: #555555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+/* Centrar el contenedor principal */
+.detalle-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tarjeta centrada con sombra y bordes suaves */
+.detalle-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+/* Imagen centrada y ajustada */
+.detalle-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+}
+
+/* Título y descripción centrados */
+.detalle-card h2 {
+    color: #2c1d11;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.detalle-card p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Estilo para el botón del menú superior */
+.btn-volver-nav {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver-nav:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* Estilo del botón "Volver al catálogo" */
+.btn-volver-nav {
+    color: #ffffff;             /* Texto blanco en lugar de azul */
+    text-decoration: none;      /* Quita el subrayado */
+    font-weight: 500;
+    background-color: #6f4e37;  /* Color café elegante para combinar */
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor encima */
+.btn-volver-nav:hover {
+    color: #ffffff;
+    text-decoration: none;      /* Asegura que no se subraye al pasar el mouse */
+    background-color: #523927;  /* Un tono café un poco más oscuro */
+}
