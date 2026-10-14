@@ -1,4 +1,6 @@
-/* 1. Reset global y tipografía */
+/* ==========================================
+   1. RESET GLOBAL Y TIPOGRAFÍA
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,9 @@ body {
     background-color: #f8f9fa;
 }
 
-/* 2. Estilos de la barra de navegación (Navbar) */
+/* ==========================================
+   2. NAVBAR
+   ========================================== */
 nav {
     background-color: #2c1d11;
     color: #ffffff;
@@ -42,7 +46,27 @@ nav ul li:hover {
     color: #d4a373;
 }
 
-/* 3. Contenedor principal de cards */
+/* Botón del Navbar ("Volver al catálogo") */
+.btn-volver-nav {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #6f4e37;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver-nav:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #523927;
+}
+
+/* ==========================================
+   3. CATÁLOGO / GRID DE TARJETAS
+   ========================================== */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -52,7 +76,6 @@ nav ul li:hover {
     margin: 0 auto;
 }
 
-/* 4. Estilos de las tarjetas (Cards) */
 .card {
     background-color: #ffffff;
     border-radius: 12px;
@@ -91,7 +114,6 @@ nav ul li:hover {
     flex-grow: 1;
 }
 
-/* 5. Botón "Ver más" */
 .btn-ver-mas {
     margin-top: 1rem;
     padding: 0.5rem 1.2rem;
@@ -109,7 +131,9 @@ nav ul li:hover {
     background-color: #bc8a5f;
 }
 
-/* 6. Estilos para la Ventana Modal */
+/* ==========================================
+   4. VENTANA MODAL
+   ========================================== */
 .modal {
     display: none;
     position: fixed;
@@ -170,98 +194,10 @@ nav ul li:hover {
     font-size: 0.95rem;
     line-height: 1.4;
 }
-/* Pantalla Detalle */
-.detalle-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
 
-.btn-regresar {
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    color: #2c1d11;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn-regresar:hover {
-    color: #d4a373;
-}
-
-.detalle-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.detalle-card img {
-    width: 100%;
-    max-height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.detalle-card h2 {
-    color: #2c1d11;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.detalle-card p {
-    color: #555555;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-.detalle-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-.btn-regresar {
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    color: #2c1d11;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn-regresar:hover {
-    color: #d4a373;
-}
-
-.detalle-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.detalle-card img {
-    width: 100%;
-    max-height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.detalle-card h2 {
-    color: #2c1d11;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.detalle-card p {
-    color: #555555;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-/* Centrar el contenedor principal */
+/* ==========================================
+   5. PANTALLA DE DETALLE
+   ========================================== */
 .detalle-container {
     max-width: 600px;
     margin: 2rem auto;
@@ -270,7 +206,18 @@ nav ul li:hover {
     justify-content: center;
 }
 
-/* Tarjeta centrada con sombra y bordes suaves */
+.btn-regresar {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #2c1d11;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-regresar:hover {
+    color: #d4a373;
+}
+
 .detalle-card {
     background-color: #ffffff;
     border-radius: 12px;
@@ -280,7 +227,6 @@ nav ul li:hover {
     width: 100%;
 }
 
-/* Imagen centrada y ajustada */
 .detalle-card img {
     width: 100%;
     max-width: 400px;
@@ -292,7 +238,6 @@ nav ul li:hover {
     display: block;
 }
 
-/* Título y descripción centrados */
 .detalle-card h2 {
     color: #2c1d11;
     font-size: 1.8rem;
@@ -303,37 +248,4 @@ nav ul li:hover {
     color: #555555;
     font-size: 1rem;
     line-height: 1.6;
-}
-
-/* Estilo para el botón del menú superior */
-.btn-volver-nav {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
-
-.btn-volver-nav:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-/* Estilo del botón "Volver al catálogo" */
-.btn-volver-nav {
-    color: #ffffff;             /* Texto blanco en lugar de azul */
-    text-decoration: none;      /* Quita el subrayado */
-    font-weight: 500;
-    background-color: #6f4e37;  /* Color café elegante para combinar */
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-/* Efecto al pasar el cursor encima */
-.btn-volver-nav:hover {
-    color: #ffffff;
-    text-decoration: none;      /* Asegura que no se subraye al pasar el mouse */
-    background-color: #523927;  /* Un tono café un poco más oscuro */
 }

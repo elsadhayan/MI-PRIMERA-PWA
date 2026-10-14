@@ -1,4 +1,5 @@
 const CACHE_NAME = 'cafe-app-v1';
+
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -15,7 +16,7 @@ const ASSETS_TO_CACHE = [
   './imagenes/cafe10.jpg'
 ];
 
-// Evento Install: Guarda los archivos en la caché
+// Evento Install: Guarda los archivos estáticos en la caché
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -36,11 +37,16 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Evento Fetch: Responde desde la caché si está disponible o busca en la red
+// Evento Fetch: Estrategia NETWORK FIRST
+// Intenta obtener la versión más reciente de la red; si no hay internet, responde con la caché.
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request);
-    })
+    fetch(event.request)
+      .then((networkResponse) => {
+        return networkResponse;
+      })
+      .catch(() => {
+        return caches.match(event.request);
+      })
   );
 });
