@@ -228,14 +228,13 @@ nav ul li:hover {
 }
 
 .detalle-card img {
+    display: block;
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    max-height: 300px;
+    max-width: 280px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin: 0 auto 1.5rem auto;
-    display: block;
 }
 
 .detalle-card h2 {
