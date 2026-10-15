@@ -12,16 +12,11 @@ const imagenes = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Capturar el ID de la URL
-    const params = new URLSearchParams(window.location.search);
-    const cafeId = params.get('id');
 
-    console.log("ID obtenido de la URL:", cafeId);
+    const parametros = new URLSearchParams(window.location.search);
+    const cafeId = parametros.get("id");
 
-    // Buscar coincidencia ignorando si es texto o número
-    const cafeSeleccionado = imagenes.find(item => String(item.id) === String(cafeId));
-
-    console.log("Café encontrado:", cafeSeleccionado);
+    const cafeSeleccionado = imagenes.find(cafe => cafe.id === Number(cafeId));
 
     if (cafeSeleccionado) {
         document.getElementById("cafe-img").src = cafeSeleccionado.imagen;
@@ -31,4 +26,5 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         document.querySelector(".detalle-card").innerHTML = "<h2>Café no encontrado</h2>";
     }
+
 });
